@@ -1,11 +1,12 @@
 Control code for the LAVA wireless infrastructure
 =================================================
 
-This directory contains three subdirectories,
+This directory contains four subdirectories,
 
 	deprecated/ // oldest code, not to be used
 	latest/ // most recent code, should be used
 	mid/ // older code, can be used
+	controlCode/ // Arduino control code
 
 two code files that cannot be moved,
 
