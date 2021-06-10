@@ -1,0 +1,21 @@
+# Makefile -- created by Will Sussman on July 9, 2019
+
+CC		= gcc
+CFLAGS	= -g3 -std=c99 -pedantic -Wall
+
+all: willsAlgorithm
+
+willsAlgorithm.o: willsAlgorithm.c /home/riz3/willsCode/liblawa/liblawa.h
+	${CC} ${CFLAGS} -c willsAlgorithm.c
+
+willsAlgorithm: willsAlgorithm.o
+	${CC} -L/home/riz3/willsCode/liblawa -Wl,-rpath=/home/riz3/willsCode/liblawa -o $@ $^ -llawa -lm
+
+clean:
+	rm *.o
+
+setpath.o: setpath.c /home/riz3/willsCode/liblawa/liblawa.h
+	${CC} ${CFLAGS} -c setpath.c
+
+setpath: setpath.o
+	${CC} -L/home/riz3/willsCode/liblawa -Wl,-rpath=/home/riz3/willsCode/liblawa -o $@ $^ -llawa -lm

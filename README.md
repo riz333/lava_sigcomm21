@@ -1,11 +1,7 @@
 Control code for the LAVA wireless infrastructure
 =================================================
 
-The directory
-
-	/willsLibrary/
-
-contains three subdirectories,
+This directory contains three subdirectories,
 
 	deprecated/ // oldest code, not to be used
 	latest/ // most recent code, should be used
