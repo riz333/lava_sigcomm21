@@ -1,13 +1,12 @@
 Control code for the LAVA wireless infrastructure
 =================================================
 
-This directory contains five subdirectories,
+This directory contains four subdirectories,
 
-	deprecated/ // oldest code, not to be used
-	latest/ // most recent code, should be used
-	mid/ // older code, can be used
-	controlCode/ // Arduino control code
-	circuit_diagram/ // detailed diagrams of the LAVA multidirectional ptototype
+	control/ // contains the LAVA control plane algorithm
+	misc/ // contains miscellaneous auxiliary functions
+	controlCodeMCU/ // contains the Arduino microcontroller control code
+	circuit_diagram/ // contains detailed circuit diagrams of the LAVA multidirectional prototype
 
 two code files that cannot be moved,
 
@@ -19,7 +18,7 @@ and this README.
 
 The subdirectory
 
-	latest/
+	control/
 
 contains three code files,
 
@@ -36,21 +35,19 @@ and a Makefile that generates executables.
 
 The subdirectory
 
-	mid/
+	misc/
 
-contains five code files,
+contains three code files,
 
-	algorithm.c // older single-link implementation
-	fwdcmds.c // older Arduino-subcontroller bridge
 	getv.c // queries voltage at an Arduino
-	setnode.c // sends command triplet to an Arduino
-	setpath.c // older single-link implementation
+	setnode.c // sends commands to an Arduino
+	setpath.c // single-link route selection
 
 and a Makefile that generates executables.
 
 The subdirectory 
 
-       controlCode/
+       controlCodeMCU/
 
 contains the code implemented in the arduinos to control the units
 
@@ -61,6 +58,6 @@ Finally, the subdirectory
 contains four circuit schematics (pertaining to the LAVA multidirectional element design)
 
 	amplifier_selection.pdf // describes how the LAVA element activates an amplifier
-	element_control_and_power_schematic.pdf // shows all connections between the RF hardware and the microcontroller unit
-	element_rf_schematic.pdf // shows the RF connections
+	element_control_and_power_schematic.pdf // shows all connections between the the element's hardware and the microcontroller unit
+	element_rf_schematic.pdf // shows the element's RF connections
 	pcb_prototype.pdf // schematic of the element's custom PCB board (RF switching and phase shifting)
